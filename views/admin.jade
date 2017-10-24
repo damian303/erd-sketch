@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title Sketch
+    meta(name="description", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Free multi-user tool for producing entity relationship diagrams")
+    meta(name="keywords", content="ERD entity relationship diagram draw create multi user free")
+    meta(name="author", content="Damian Hobson erdsketch@gmail.com")
+    link(href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/nouislider.min.css', rel='stylesheet')
+  body
+    block content
+      div.container
+        div.row.logRow
+        form(action='/log', method='post')
+          div.row.logRow
+            div.twelve.columns.centerize
+              select#erd_id(name='erd_id')
+                each erd in erd_list
+                  option(value=erd.erd_id) #{erd.name}
+          div.row.logRow
+            div.twelve.columns.centerize
+              button.button-primary(type='submit') Select Diagram
+        div.row.logRow
+          div#slider.twelve.columns.centerize
+        div.row.logRow
+          div#info.twelve.columns.centerize(style="width:200px")
+        div.row
+          div#svg.twelve.columns.centerize  
+script.
+  var data="#{log}";
+  var error="#{error}";
+script(src="/libs/jquery-3.2.0.min.js")
+script(src="/libs/jquery.cookie.js")
+script(src="/libs/materialize.min.js")
+script(src="https://d3js.org/d3.v4.min.js")
+script(src="/libs/moment.min.js")
+script(src="/libs/nouislider.min.js")
+script(src="/js/logview.js")
+

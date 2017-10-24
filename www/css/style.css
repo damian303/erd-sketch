@@ -1,0 +1,247 @@
+.top-bar{
+  margin-top:30px;
+}
+#chat_text{
+  max-height: 400px;
+  overflow-y: scroll; 
+}
+.set_mobile_height{
+  height: 50vh !important;
+  margin-bottom:0 !important;
+}
+.set_height{
+  min-height: 95vh !important;
+  margin-bottom:0 !important;
+}
+.page-footer{
+  margin-bottom:0 !important;
+}
+.diagram_form{
+  border:none !important;
+  padding:0px !important;
+  height: auto !important;
+  margin: 0 !important;
+  background-color: white !important;
+}
+#selection img{
+  height:50px;
+}
+.logRow{
+  margin:10px;
+}
+.line_path_big{
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.line_move{
+  cursor:move;
+}
+.selectionObject{
+  /*width:25%;*/
+  height:auto;
+  margin:7px;
+}
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.toolObject{
+  /*width:25%;
+  min-width: 50px;*/
+  border:;
+  height:auto;
+  margin:7px;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.toolObject:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+.stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+.linkEndTool{
+  display: inline-block;
+  margin:3%;
+  width:12%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.linkEndTool img {
+  margin: auto 0;
+  width:80%;
+  height:80%;
+}
+.selected{
+  stroke: #636363;
+  stroke-width: 2;
+}
+.tooltipped{
+  cursor:pointer;
+}
+#tooltip{
+  position:absolute;
+  border: 2px solid #666666;
+  border-radius: 3px;
+  background: white;
+  padding:10px;
+  min-width: 40px;
+  min-height:20px;
+  color: black;
+  font-family: sans-serif;
+  visibility: hidden;
+}
+.draw_body{
+  background-color: #e6e6e6;
+}
+.centerize{
+  text-align: center;
+}
+#logo{
+  margin: auto 0;
+  height:70px;
+  width:70px;
+}
+#descriptive{
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+}
+#addUserForm{
+  position:absolute;
+  border:1px solid black;
+  background:white;
+  padding:5px;
+}
+#openList{
+  position:absolute;
+  border:1px solid black;
+  background:white;
+  padding:5px;
+}
+.openMe{
+  cursor:pointer;
+}
+form{
+  margin-top: 50px;
+}
+.menu_item{
+  height:95px;
+  background-size: 50px 50px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  cursor:pointer;
+  position:relative;
+}
+.menu_text{
+  margin-bottom: 0;
+}
+.info_label{
+  width:100%;
+  position: absolute;
+  bottom: 0;
+}
+.info_label p{
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+}
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.table_border{
+  stroke-width:2;
+  stroke:#636363;
+  fill:#bdbdbd;
+}
+.other_user{
+  visibility: hidden;
+  stroke:none;
+  fill:black;
+}
+.remove_table{
+  cursor:pointer;
+}
+.link_point{
+  fill:#636363;
+  opacity:.8;
+  visibility: hidden;
+  cursor:pointer;
+}
+.temp_line{
+  fill:none;
+  stroke: #a6bddb;
+  stroke-width: 4px;
+  visibility: hidden;
+  stroke-dasharray: 5 7;
+}
+.temp_path{
+  fill:none;
+  stroke: red;
+  stroke-width: 4px;
+  visibility: hidden;
+  stroke-dasharray: 5 7;
+}
+.link_line{
+  stroke:black;
+  stroke-width:4px;
+  fill:none;
+}
+.name{
+  text-anchor:middle;
+  font-family: Helvetica ;
+  fill:white ;
+  stroke:none;
+  pointer-events:pointer ;
+  text-align: center;
+}
+.fields{
+  text-anchor:left;
+  font-family: Helvetica ;
+  fill:black ;
+  stroke:none;
+  pointer-events:pointer ;
+  text-align: center;
+}
+.add_field{
+  visibility: hidden;
+  cursor: pointer;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}

@@ -1,0 +1,88 @@
+/*
+ ******************************************************
+ *Main nav by Web Designer Pad
+ ******************************************************
+*/
+	#nav{margin: auto;width: 550px;}
+
+/*
+ ******************************************************
+ *Design the main ul
+ ******************************************************
+*/
+	#nav ul {
+	background-color: #000;
+	padding: 0 0px;
+	list-style: none;
+	position: relative;
+	display: inline-block;
+	}
+/*
+ ************************************
+ *Design the main ul li
+ ************************************
+*/
+	#nav ul li {
+	float: left;
+	border-right: 1px solid #ccc;
+	}
+
+	#nav ul li:hover {
+		background-color: cornflowerblue;
+	}
+
+/*
+ ******************************************************
+ *Disable the right border of last li
+ ******************************************************
+*/
+	#nav ul li:nth-child(5){border-right:none; }
+
+	#nav ul li:hover a {
+		color: #fff;
+	}
+
+	#nav ul li a {
+		color: #E4E4E4;
+		text-decoration: none;
+		padding: 5px 20px;
+		display: block;
+		font-family: sans-serif,serif;
+	}
+/*
+ ************************************
+ *(Dropdown) Design the sub ul li
+ ************************************
+*/
+/*
+ ******************************************************
+ *Hide the submenu ul at start
+ ******************************************************
+*/
+	#nav ul ul{visibility:hidden;display: none;}
+/*
+ ******************************************************
+ *Show the submenu when li gets hover
+ ******************************************************
+*/
+	#nav ul li:hover > ul {visibility:visible;display: block;}
+	#nav ul ul {
+	position: absolute;
+	background-color: rgb(0,0,0);
+	padding: 0px;
+	}
+
+	#nav ul ul li {
+		position: relative;
+		float: none;
+		border-top: 1px solid #727272;
+	}
+
+	#nav ul ul li a {
+		padding: 15px 20px;
+		color: #fff;
+	}
+
+	#nav ul ul li a:hover {
+		background-color: cornflowerblue;
+	}

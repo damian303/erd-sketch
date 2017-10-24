@@ -1,0 +1,132 @@
+doctype html
+html
+  head
+    title Sketch
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Free multi-user tool for producing entity relationship diagrams")
+    meta(name="keywords", content="ERD entity relationship diagram draw database design create multi user free")
+    meta(name="author", content="Damian Hobson erdsketch@gmail.com")
+    link(href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(href='/css/materialize.min.css', rel='stylesheet' media='screen,projection')
+    link(href='/css/style.css', rel='stylesheet')
+  body
+    ul#dropdown_file.dropdown-content
+      li
+        a#save.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Save
+      li
+        a#open.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Open
+      li
+        a#new.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") New
+      li
+        a#reset.tooltipped(href="#", data-tooltip="This clears the contents!") Delete Contents
+      li
+        a#delete.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Delete File
+    nav
+      div.nav-wrapper.indigo
+        a.brand-logo.center(href="#!")
+          img#logo(src="/images/logo.png")
+        a.button-collapse(href="#", data-activates="mobile-menu")
+          i.material-icons menu
+        ul.left.hide-on-med-and-down
+          li
+            a.dropdown-button(href="#", data-activates="dropdown_file") File
+          li
+            a#share.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Share
+          li
+            a#downloadPNG.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Export
+          li
+            a#createAccount.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Create an account for full access") Create Account
+          li
+            a#login.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Login to your account") Login
+        ul#mobile-menu.side-nav
+          li
+            a#save.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Save
+          li
+            a#open.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Open
+          li
+            a#new.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") New
+          li
+            a#reset.tooltipped(href="#", data-tooltip="This clears the contents!") Delete Contents
+          li
+            a#delete.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Delete File
+          li
+            a#share.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Share
+          li
+            a#downloadPNG.unavailable.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="You must have an account to use this feature.") Export
+          li
+            a#createAccount.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Create an account for full access") Create Account
+          li
+            a#login.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Login to your account") Login
+   div.row.set_height
+     div.col.s2.teal.lighten-2.set_height
+       ul#info.collection(style="border-radius:10px")
+         li#selection.collection-item
+           img#deleteSelection.selectionObject.tooltipped(src="/images/delete.svg", data-position="bottom", data-delay="50", data-tooltip="Click to delete selection.")
+           img#selectAll.selectionObject.tooltipped(src="/images/select_all.svg", data-position="bottom", data-delay="50", data-tooltip="Select All.")
+           img#selectNone.selectionObject.tooltipped(src="/images/select_none.svg", data-position="bottom", data-delay="50", data-tooltip="Select None.")
+         li#toolbox.collection-item
+           img#addTable.toolObject.tooltipped(src="/images/add_table.svg",data-position="bottom", data-delay="50", data-tooltip="Click to add an entity.")
+           img#addCircle.toolObject.tooltipped(src="/images/ellipse.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add an ellipse.")
+           img#addRectangle.toolObject.tooltipped(src="/images/rectangle.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a rectangle.")
+           img#addDiamond.toolObject.tooltipped(src="/images/diamond.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a diamond.")
+           img#addTextBox.toolObject.tooltipped(src="/images/text_box.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a text box.")
+           img#addLine.toolObject.tooltipped(src="/images/line.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a line.")
+         li.collection-item
+           div#linkEnds.tooltipped(data-position="bottom", data-delay="50", data-tooltip="Change the default table link end.")
+         li.collection-item
+           div#colorPalette.tooltipped(data-position="bottom", data-delay="50", data-tooltip="Change the default table color.")
+     div#erd.col.s8.set_height
+     div.col.s2.teal.lighten-2.set_height
+       ul#users.collection.with-header(style="border-radius:10px")
+         li.collection-item.header Users
+         li.user.collection-item.avatar
+           i.tiny.material-icons.circle.indigo perm_identity
+           p Trial Account
+       ul#chat.collection.with-header(style="border-radius:10px")
+         li#chat_header.collection-item.header Chat
+         li#chat_input.collection-item.avatar.tooltipped(style=("padding-left:0;") data-position="bottom", data-delay="50", data-tooltip="Create an account to use the chat feature.")
+           .input-field
+             i.small.material-icons.prefix chat_bubble_outline
+             input#chat_input_text.autocomplete(type="text")
+             label#chat_input_label(for="chat_input_text") Chat
+         li#chat_text.collection-item
+   footer.page-footer.indigo
+     div.container
+       div.row
+         div.col.16.12c
+           h5.white-text ERD Sketch
+           p.grey-text.text-lighten-4 This is a thesis project by Damian Hobson. It is a work in progress.
+     div.footer-copyright
+       div.container © 2017 Damian Hobson
+    div#modal.modal(style="border-radius:10px;")
+      div.modal-content
+        h4#modal_head Welcome to ERD Sketch
+        div#modal_content
+          p This is a multi-user application for creating Entity Relationship Diagrams using Crows Foot Notation.
+          p Click or drag objects in the tool box to add them to the diagram.
+          p Link objects by dragging between the linkpoints or selecting the link tool.
+          p You can invite other users to collaborate on the diagram.
+        div.modal-footer
+          button#modal_submit.modal-action.modal-close.waves-effect.waves-green.btn-flat Open
+          button#modal_cancel.modal-action.modal-close.waves-effect.waves-red.btn-flat Cancel
+script.
+  username="#{username}";
+  erd_name="#{erd_name}";
+  erd_id="#{erd_id}";
+  signup_error="#{signup_error}";
+  login_error="#{login_error}";
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86454738-1', 'auto');
+  ga('send', 'pageview');
+script(src="/libs/jquery-3.2.0.min.js")
+script(src="/libs/jquery.cookie.js")
+script(src="/libs/materialize.min.js")
+script(src="/libs/d3.min.js")
+script(src="/libs/simg.js")
+script(src="/js/cloneobj.js")
+script(src="/libs/socket.io.js")
+script(src="/js/ui_setup.js")
+script(src="/js/main_start.js")

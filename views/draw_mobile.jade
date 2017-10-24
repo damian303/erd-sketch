@@ -1,0 +1,133 @@
+doctype html
+html
+  head
+    title Sketch
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Free multi-user tool for producing entity relationship diagrams")
+    meta(name="keywords", content="ERD entity relationship diagram draw create multi user free")
+    meta(name="author", content="Damian Hobson erdsketch@gmail.com")
+    link(href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(href='/css/materialize.min.css', rel='stylesheet' media='screen,projection')
+    link(href='/css/style_dev.css', rel='stylesheet')
+  body
+    ul#dropdown_file.dropdown-content
+      li
+        a#save(href="#") Save
+      li
+        a#open(href="#") Open
+      li
+        a#new(href="#") New
+      li
+        a#reset.tooltipped(href="#", data-tooltip="This clears the contents!") Delete Contents
+      li
+        a#delete.tooltipped(href="#", data-tooltip="This deletes the diagram!") Delete File
+    nav
+      div.nav-wrapper.indigo
+        a.brand-logo.center(href="#!")
+          img#logo(src="/images/logo.png", style="margin:auto 0")
+        a.button-collapse(href="#", data-activates="mobile-menu")
+          i.material-icons menu
+        ul.left.hide-on-med-and-down
+          li
+            a.dropdown-button(href="#", data-activates="dropdown_file") File
+          li
+            a#share.tooltipped(href="#", data-position="bottom", data-delay="50", data-tooltip="Invite someone to work on the diagram.") Share
+          li
+            a#downloadPNG.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Export the diagram as a png image.") Export
+          li
+            a#logout.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Logout of ERD Sketch.") Logout
+        ul#mobile-menu.side-nav
+          li
+            a#save(href="#") Save
+          li
+            a#open(href="#") Open
+          li
+            a#new(href="#") New
+          li
+            a#reset.tooltipped(href="#", data-tooltip="This clears the contents!") Delete Contents
+          li
+            a#delete.tooltipped(href="#", data-tooltip="This deletes the diagram!") Delete File
+          li
+            a#share.tooltipped(href="#", data-position="bottom", data-delay="50", data-tooltip="Invite someone to work on the diagram.") Share
+          li
+            a#downloadPNG.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Export the diagram as a png image.") Export
+          li
+            a#logout.tooltipped(href="#",data-position="bottom", data-delay="50", data-tooltip="Logout of ERD Sketch.") Logout
+     div.row.teal.lighten-2(style="margin-bottom:0")
+       div.col.s2.offset-s3.valign-wrapper.center-align
+        img#deleteSelection.selectionObject.responsive-img.tooltipped(src="/images/delete.svg", data-position="bottom", data-delay="50", data-tooltip="Click to delete selection.")
+       div.col.s2.valign-wrapper.center-align      
+        img#selectAll.selectionObject.responsive-img(src="/images/select_all.svg", data-position="bottom", data-delay="50", data-tooltip="Select All.")
+       div.col.s2.valign-wrapper.center-align   
+        img#selectNone.selectionObject.responsive-img(src="/images/select_none.svg", data-position="bottom", data-delay="50", data-tooltip="Select None.")
+     div.row.teal.lighten-2(style="margin-top:0")
+       div.col.s2.valign-wrapper
+        img#addTable.toolObject.responsive-img(src="/images/add_table.svg",data-position="bottom", data-delay="50", data-tooltip="Click to add an entity.")
+       div.col.s2.valign-wrapper
+        img#addCircle.toolObject.responsive-img(src="/images/ellipse.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add an ellipse.")
+       div.col.s2.valign-wrapper
+        img#addRectangle.toolObject.responsive-img(src="/images/rectangle.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a rectangle.")
+       div.col.s2.valign-wrapper    
+        img#addDiamond.toolObject.responsive-img(src="/images/diamond.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a diamond.")
+       div.col.s2.valign-wrapper
+        img#addTextBox.toolObject.responsive-img(src="/images/text_box.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a text box.")
+       div.col.s2.valign-wrapper     
+        img#addLine.toolObject.responsive-img(src="/images/line.svg", data-position="bottom", data-delay="50", data-tooltip="Click to add a line.")
+     div#erd.col.s8.set_height
+     div.col.s2.teal.lighten-2.set_height
+       ul#users.collection.with-header(style="border-radius:10px")
+         li.collection-item.header Users
+         li.user.collection-item.avatar
+           i.tiny.material-icons.circle.indigo perm_identity
+           p #{username}
+       ul#chat.collection.with-header(style="border-radius:10px")
+         li#chat_header.collection-item.header Chat
+         li#chat_input.collection-item.avatar.tooltipped(style=("padding-left:0;") data-position="bottom", data-delay="50", data-tooltip="Create an account to use the chat feature.")
+           .input-field
+             i.small.material-icons.prefix chat_bubble_outline
+             input#chat_input_text.autocomplete(type="text")
+             label#chat_input_label(for="chat_input_text") Chat
+         li.collection-item
+          #chat_text
+   footer.page-footer.indigo
+     div.container
+       div.row
+         div.col.16.12c
+           h5.white-text ERD Sketch
+           p.grey-text.text-lighten-4 This is a thesis project by Damian Hobson. It is a work in progress.
+     div.footer-copyright
+       div.container © 2017 Damian Hobson
+    div#modal.modal(style="border-radius:10px;")
+      div.modal-content
+        h4#modal_head Open Diagram
+        div#modal_content
+          .preloader-wrapper.active
+            .spinner-layer.spinner-red-only
+              .circle-clipper.left
+                .circle
+              .gap-patch
+                .circle
+              .circle-clipper.right
+                .circle
+        div.modal-footer
+          button#modal_submit.modal-action.modal-close.waves-effect.waves-green.btn-flat Open
+          button.modal-action.modal-close.waves-effect.waves-red.btn-flat Cancel
+script.
+  username="#{username}";
+  erd_name="#{erd_name}";
+  erd_id="#{erd_id}";
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86454738-1', 'auto');
+  ga('send', 'pageview');
+script(src="/libs/jquery-3.2.0.min.js")
+script(src="/libs/jquery.cookie.js")
+script(src="/libs/materialize.min.js")
+script(src="/libs/d3.min.js")
+script(src="/libs/simg.js")
+script(src="/js/cloneobj.js")
+script(src="/libs/socket.io.js")
+script(src="/js/ui_setup.js")
+script(src="/js/main_dev.js")

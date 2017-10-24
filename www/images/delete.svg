@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 30 30"
+   version="1.1"
+   x="0px"
+   y="0px"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="delete.svg"
+   width="30"
+   height="30">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Bold Delete</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="883"
+     inkscape:window-height="567"
+     id="namedview18"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.888"
+     inkscape:cx="26.499999"
+     inkscape:cy="19"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">Bold Delete</title>
+  <desc
+     id="desc6">Created with Sketch.</desc>
+  <g
+     id="g8"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+     transform="matrix(0.47169811,0,0,0.47169811,-7.614567,-8.443395)">
+    <g
+       id="g10"
+       style="fill:#000000">
+      <path
+         d="M 68.667524,75.94819 C 68.609314,77.345228 67.40223,78.5 65.999974,78.5 l -31.999949,0 c -1.4024,0 -2.609445,-1.157326 -2.667549,-2.55181 L 29.4987,31.937554 C 29.46421,31.109845 28.765263,30.466812 27.937554,30.5013 27.109845,30.53579 26.466812,31.234737 26.5013,32.062446 l 1.833777,44.010636 C 28.460145,79.074715 30.989621,81.5 34.000025,81.5 l 31.999949,0 c 3.008782,0 5.539713,-2.421247 5.664949,-5.426918 L 73.4987,32.062446 C 73.53319,31.234737 72.890155,30.535788 72.062446,30.5013 71.234737,30.46681 70.535788,31.109845 70.5013,31.937554 L 68.667524,75.94819 Z M 49,72 c 0,0.828427 0.671573,1.5 1.5,1.5 0.828427,0 1.5,-0.671573 1.5,-1.5 l 0,-34 c 0,-0.828427 -0.671573,-1.5 -1.5,-1.5 -0.828427,0 -1.5,0.671573 -1.5,1.5 l 0,34 z m -10.499352,0.0441 c 0.02435,0.828069 0.715381,1.479608 1.543451,1.455253 0.828069,-0.02435 1.479608,-0.715382 1.455253,-1.543451 l -1,-34 c -0.02435,-0.828069 -0.715381,-1.479608 -1.543451,-1.455253 -0.828069,0.02435 -1.479608,0.715381 -1.455253,1.543451 l 1,34 z m 20,-0.0882 c -0.02435,0.828069 0.627184,1.519096 1.455253,1.543451 0.82807,0.02435 1.519096,-0.627184 1.543451,-1.455253 l 1,-34 c 0.02435,-0.82807 -0.627184,-1.519096 -1.455253,-1.543451 -0.82807,-0.02435 -1.519096,0.627184 -1.543451,1.455253 l -1,34 z M 61.215549,24 75,24 c 0.828427,0 1.5,0.671573 1.5,1.5 0,0.828427 -0.671573,1.5 -1.5,1.5 l -50,0 c -0.828427,0 -1.5,-0.671573 -1.5,-1.5 0,-0.828427 0.671573,-1.5 1.5,-1.5 l 13.784451,0 0.893095,-2.232739 C 40.418096,19.915887 42.509777,18.5 44.5,18.5 l 11,0 c 1.995791,0 4.079961,1.411029 4.822454,3.267261 L 61.215549,24 l 0,0 z m -3.231098,0 -0.447427,-1.118567 C 57.250124,22.164184 56.269086,21.5 55.5,21.5 l -11,0 c -0.763606,0 -1.7521,0.669124 -2.037024,1.381433 L 42.015549,24 57.984451,24 Z"
+         id="path12"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
